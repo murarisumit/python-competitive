@@ -1,7 +1,41 @@
 ### Input
 
 ```python
+from sys import stdin, stdout  
+
+# Simple input
 numbers = list(map(int, input().split()))
+
+# input via readline method 
+n = stdin.readline() 
+  
+# array input similar method 
+arr = [int(x) for x in stdin.readline().split()] 
+```
+
+```python
+# Faster output as mentioned here: https://www.geeksforgeeks.org/python-input-methods-competitive-programming/?ref=rp
+# template begins 
+##################################### 
+  
+# import libraries for input/ output handling 
+# on generic level 
+import atexit, io, sys 
+  
+# A stream implementation using an in-memory bytes  
+# buffer. It inherits BufferedIOBase. 
+buffer = io.BytesIO() 
+sys.stdout = buffer
+  
+# print via here 
+@atexit.register 
+def write(): 
+    sys.__stdout__.write(buffer.getvalue()) 
+  
+##################################### 
+# template ends
+
+print(some_var)  
 ```
 
 ### List and Dict
