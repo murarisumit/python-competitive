@@ -1,3 +1,5 @@
+### Input
+numbers = list(map(int, input().split()))
 
 ### Itertools
 Permutations:
