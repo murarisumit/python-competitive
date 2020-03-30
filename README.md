@@ -59,6 +59,13 @@ print(some_var)
     print(sorted(zipped_2)) 
     #sorting according to keys 
     ```
+### Strings
+
+* Reverse:
+  ```python
+  a ="GeeksForGeeks"
+  print("Reverse is", a[::-1]) 
+  ```
 
 ### Lambdas
 
@@ -100,3 +107,27 @@ print(some_var)
     #[110, 95, 90]
     #[20, 25, 33, 38] 
     ```
+
+### Collections
+
+* 
+  ```python
+  from collections import Counter 
+  def is_anagram(str1, str2): 
+       return Counter(str1) == Counter(str2) 
+  print(is_anagram('geek', 'eegk')) 
+
+  print(is_anagram('geek', 'peek'))  
+  ```
+
+### Recursion limit
+* 
+  ```python
+  import sys
+
+  x=1001
+  print(sys.getrecursionlimit())
+
+  sys.setrecursionlimit(x)
+  print(sys.getrecursionlimit())
+  ```
